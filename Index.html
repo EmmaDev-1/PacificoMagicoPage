@@ -7,66 +7,406 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
 
-    <div class="container">
-
-        <div class="slide">
-
-            
-            <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
-                <div class="content">
-                    <div class="name">Switzerland</div>
-                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                    <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
-                <div class="content">
-                    <div class="name">Finland</div>
-                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                    <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);">
-                <div class="content">
-                    <div class="name">Iceland</div>
-                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                    <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
-                <div class="content">
-                    <div class="name">Australia</div>
-                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                    <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
-                <div class="content">
-                    <div class="name">Netherland</div>
-                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                    <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
-                <div class="content">
-                    <div class="name">Ireland</div>
-                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                    <button>See More</button>
-                </div>
-            </div>
-
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="assets/images/GrupoLogo.jpeg" alt="Grupo Pacifico Escondido Logo">
         </div>
+        <ul class="navbar-menu">
+            <li><a href="#inicio">INICIO</a></li>
+            <li class="dropdown">
+                <a href="#">DESARROLLOS <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#por-ubicacion">Por Ubicación</a></li>
+                    <li><a href="#preventa">Preventa</a></li>
+                </ul>
+            </li>
+            <li><a href="#empresa">EMPRESA</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+    </nav>
 
-        <div class="button">
-            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+    <div id="inicio">
+        <div class="container">
+            <div class="slide">
+                <div class="item" style="background-image: url(assets/images/beachImage.jpg);">
+                    <div class="content">
+                        <div class="name">Puerto Escondido y Huatulco</div>
+                        <div class="des">Un paraiso donde puedes vivir</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(assets/images/beachImage2.jpg);">
+                    <div class="content">
+                        <div class="name">Puerto Escondido y Huatulco</div>
+                        <div class="des">Terrenos a pie de playa con vista al mar</div>
+                        <button>Ver más</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(assets/images/beachImage3.jpg);">
+                    <div class="content">
+                        <div class="name">¡Preventa exclusiva!</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(assets/images/beachImage4.jpg);">
+                    <div class="content">
+                        <div class="name">ZELENA</div>
+                        <div class="des">Palmarito Beach</div>
+                        <button>Ver más</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(assets/images/beachImage5.jpg);">
+                    <div class="content">
+                        <div class="name">PUNTA LAGO</div>
+                        <div class="des">COASTAL LIVING</div>
+                        <button>Ver más</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(assets/images/beachImage6.jpg);">
+                    <div class="content">
+                        <div class="name">MARE</div>
+                        <div class="des">RESERVE</div>
+                        <button>Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
         </div>
-
     </div>
 
+        
+    <div id="slider" class="slider">
+        <div class="wrapper">
+            <div class="itemLeft item1"><img src="assets/images/logos/logo1.jpg" alt="Logo 1"></div>
+            <div class="itemLeft item2"><img src="assets/images/logos/logo2.jpg" alt="Logo 2"></div>
+            <div class="itemLeft item3"><img src="assets/images/logos/logo3.jpg" alt="Logo 3"></div>
+            <div class="itemLeft item4"><img src="assets/images/logos/logo4.jpg" alt="Logo 4"></div>
+            <div class="itemLeft item5"><img src="assets/images/logos/logo5.jpg" alt="Logo 5"></div>
+            <div class="itemLeft item6"><img src="assets/images/logos/logo6.jpg" alt="Logo 6"></div>
+            <div class="itemLeft item7"><img src="assets/images/logos/logo7.jpg" alt="Logo 7"></div>
+            <div class="itemLeft item8"><img src="assets/images/logos/logo8.jpg" alt="Logo 8"></div>
+            <div class="itemLeft item9"><img src="assets/images/logos/logo9.jpg" alt="Logo 9"></div>
+            <div class="itemLeft item10"><img src="assets/images/logos/logo10.jpg" alt="Logo 10"></div>
+            <div class="itemLeft item11"><img src="assets/images/logos/logo11.jpg" alt="Logo 11"></div>
+            <div class="itemLeft item12"><img src="assets/images/logos/logo12.jpg" alt="Logo 12"></div>
+            <div class="itemLeft item13"><img src="assets/images/logos/logo13.jpg" alt="Logo 13"></div>
+            <div class="itemLeft item14"><img src="assets/images/logos/logo14.jpg" alt="Logo 14"></div>
+            <div class="itemLeft item15"><img src="assets/images/logos/logo15.jpg" alt="Logo 15"></div>
+          </div>
+          <div class="wrapper">
+            <div class="itemRight item1"><img src="assets/images/logos/logo1.jpg" alt="Logo 1"></div>
+            <div class="itemRight item2"><img src="assets/images/logos/logo2.jpg" alt="Logo 2"></div>
+            <div class="itemRight item3"><img src="assets/images/logos/logo3.jpg" alt="Logo 3"></div>
+            <div class="itemRight item4"><img src="assets/images/logos/logo4.jpg" alt="Logo 4"></div>
+            <div class="itemRight item5"><img src="assets/images/logos/logo5.jpg" alt="Logo 5"></div>
+            <div class="itemRight item6"><img src="assets/images/logos/logo6.jpg" alt="Logo 6"></div>
+            <div class="itemRight item7"><img src="assets/images/logos/logo7.jpg" alt="Logo 7"></div>
+            <div class="itemRight item8"><img src="assets/images/logos/logo8.jpg" alt="Logo 8"></div>
+            <div class="itemRight item9"><img src="assets/images/logos/logo9.jpg" alt="Logo 9"></div>
+            <div class="itemRight item10"><img src="assets/images/logos/logo10.jpg" alt="Logo 10"></div>
+            <div class="itemRight item11"><img src="assets/images/logos/logo11.jpg" alt="Logo 11"></div>
+            <div class="itemRight item12"><img src="assets/images/logos/logo12.jpg" alt="Logo 12"></div>
+            <div class="itemRight item13"><img src="assets/images/logos/logo13.jpg" alt="Logo 13"></div>
+            <div class="itemRight item14"><img src="assets/images/logos/logo14.jpg" alt="Logo 14"></div>
+            <div class="itemRight item15"><img src="assets/images/logos/logo15.jpg" alt="Logo 15"></div>
+          </div>
+    </div>
+
+    <div id="video" class="section">
+        <div class="video-container">
+            <iframe  src="https://www.youtube.com/embed/5YF4VxmUp1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="Desarrollo" class="section">
+        <div id="left-content">
+            <h2>Desarrollos</h2>
+        </div>
+        <div id="right-content">
+            <p>Conoce nuestra variedad de lotes residenciales para empezar tu patrimonio de ensueño en la playa.</p>
+            <div id="button-container">
+                <button>Búscalo por Ubicación</button>
+                <button>Aprovecha Nuestras Preventas</button>
+                <button>Conócelos a Detalle</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ubicacion" class="section">
+        <h2>CONOCE LA UBICACIÓN EXACTA DE TU PRÓXIMA INVERSIÓN</h2>
+        <div id="map"></div>
+    </div>
+    <div id="seccion5" class="section">
+        <h2 id="invierte">INVIERTE EN <span style="color: red;">PREVENTA</span></h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="assets/images/beachImage.jpg" alt="Mare">
+                <div class="card-content">
+                    <h3>MARE</h3>
+                    <p>Lotes escriturados a pie de playa Huatulco<br>Desde 166 m²<br>A partir de $332,750<br>Hasta 48 meses</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/beachImage2.jpg" alt="Punta Lago">
+                <div class="card-content">
+                    <h3>PUNTA LAGO</h3>
+                    <p>Con vista al mar Lotes residenciales y comerciales escriturados Punta Zicatela<br>Desde 200 m²<br>A partir de $800,000<br>Hasta 48 meses</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/beachImage3.jpg" alt="Senderos">
+                <div class="card-content">
+                    <h3>SENDEROS</h3>
+                    <p>Playa Cuatunalco y Zalchi<br>Desde 200 m²<br>Desde $160,000<br>48 meses</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/beachImage4.jpg" alt="Sonterra">
+                <div class="card-content">
+                    <h3>SONTERRA</h3>
+                    <p>Lotes residenciales Playa Mazunte<br>Desde 200 m²<br>A partir de $130,000<br>Hasta 48 meses</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/beachImage5.jpg" alt="Zelena">
+                <div class="card-content">
+                    <h3>ZELENA</h3>
+                    <p>Lotes residenciales escriturados Playa Palmarito<br>Desde 200 m²<br>A partir de $800,000<br>Hasta 48 meses</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="terrenosEscriturados">
+        <h2>TERRENOS ESCRITURADOS</h2>
+        <div class="terrenos">
+            <div class="terrenos-tarjeta">
+                <img src="assets/images/beachImage6.jpg" alt="Xadani">
+                <div class="terrenos-content">
+                    <h3>XADANI</h3>
+                    <p>Lotes residenciales escriturados</p>
+                    <p>Playa Bacocho y playa Delfín</p>
+                    <p>Desde 200 m²</p>
+                    <p>Desde $500,000</p>
+                    <p>48 meses de financiamiento</p>
+                </div>
+            </div>
+            <div class="terrenos-tarjeta">
+                <img src="assets/images/beachImage5.jpg" alt="Punta Lago">
+                <div class="terrenos-content">
+                    <h3>PUNTA LAGO</h3>
+                    <p>Con vista al mar</p>
+                    <p>Lotes residenciales y comerciales escriturados</p>
+                    <p>Punta Zicatela</p>
+                    <p>Desde 200 m²</p>
+                    <p>A partir de $800,000</p>
+                    <p>Hasta 48 meses</p>
+                </div>
+            </div>
+            <div class="terrenos-tarjeta">
+                <img src="assets/images/beachImage4.jpg" alt="Zelena">
+                <div class="terrenos-content">
+                    <h3>ZELENA</h3>
+                    <p>Lotes residenciales escriturados</p>
+                    <p>Playa Palmarito</p>
+                    <p>Desde 200 m²</p>
+                    <p>A partir de $800,000</p>
+                    <p>Hasta 48 meses</p>
+                </div>
+            </div>
+            <div class="terrenos-tarjeta">
+                <img src="assets/images/beachImage3.jpg" alt="Punta Escondida">
+                <div class="terrenos-content">
+                    <h3>PUNTA ESCONDIDA</h3>
+                    <p>Lotes residenciales escriturados</p>
+                    <p>Playa Palmarito</p>
+                    <p>Desde 195 m²</p>
+                    <p>Desde $350,000</p>
+                    <p>Hasta 36 meses</p>
+                </div>
+            </div>
+            <div class="terrenos-tarjeta">
+                <img src="assets/images/beachImage2.jpg" alt="Mare">
+                <div class="terrenos-content">
+                    <h3>MARÉ</h3>
+                    <p>Lotes escriturados a pie de playa</p>
+                    <p>Huatulco</p>
+                    <p>Desde 166 m²</p>
+                    <p>A partir de $332,750</p>
+                    <p>Hasta 48 meses</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="todos_desarrollos" class="desarrollo_clase">
+        <div class="desarrollo_texto">
+            TODOS LOS <br> DESARROLLOS
+        </div>
+        <div class="ver_todos_boton">
+            VER TODOS
+        </div>
+    </div>
+    <div id="oportunidades_unicas" class="oportunidades_clase">
+        <h2>OPORTUNIDADES ÚNICAS</h2>
+        <div class="categoria">
+            <h3>CASAS</h3>
+            <div class="oportunidad">
+                <img src="assets/images/casas.jpg" alt="Lomas de Cocoyoc">
+                <div class="detalles">
+                    <h4>LOMAS DE COCOYOC</h4>
+                    <p>Cocoyoc, Morelos</p>
+                </div>
+            </div>
+            <div class="oportunidad">
+                <img src="assets/images/casas2.jpg" alt="Paseo de Churubusco">
+                <div class="detalles">
+                    <h4>PASEO DE CHURUBUSCO</h4>
+                    <p>Ciudad de México</p>
+                </div>
+            </div>
+        </div>
+        <div class="categoria">
+            <h3>LOTES</h3>
+            <div class="oportunidad">
+                <img src="assets/images/lotes.jpg" alt="Lote La Barra">
+                <div class="detalles">
+                    <h4>LOTE LA BARRA</h4>
+                    <p>Puerto Escondido, Oax.</p>
+                </div>
+            </div>
+            <div class="oportunidad">
+                <img src="assets/images/lotes2.jpg" alt="Lote Puertocito">
+                <div class="detalles">
+                    <h4>LOTE PUERTECITO</h4>
+                    <p>Puerto Escondido, Oax.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="grupo_pacifico" class="pacifico_clase" style="background-image: url(assets/images/beachImage6c.jpg); ">
+        <div class="pacifico_texto">
+            <img src="assets/images/GrupoLogo2.jpg" alt="Lote Puertocito">
+        </div>
+        <div class="pacifico_boton">
+            En Grupo Pacífico Escondido, nuestro objetivo es brindar los mejores servicios profesionales de bienes raíces residenciales y comerciales, 
+            enfocándonos en propiedades a lo largo de la costa oaxaqueña, para ayudar a satisfacer las necesidades tanto de nuestros clientes nacionales como 
+            extranjeros, pero sobre todo para distintos presupuestos y estilos de vida.<br><br>
+            En Grupo Pacífico te ayudamos a encontrar la propiedad de tus sueños para comenzar tu proyecto en una de las regiones con más crecimiento y proyección de la República Mexicana.
+        </div>
+    </div>
+    <section id="razones_invertir" class="servicios_seccion">
+        <h2>4 RAZONES PARA INVERTIR CON GRUPO PACÍFICO ESCONDIDO</h2>
+        <div class="razones_contenedor">
+            <div class="razon">
+                <img src="assets/images/servicios.jpg" alt="Adquiere de Forma Segura">
+                <h3>ADQUIERE DE FORMA SEGURA</h3>
+                <p>En la totalidad de nuestros desarrollos contamos con los permisos pertinentes por parte de las autoridades municipales así como de las comunidades de la costa oaxaqueña.</p>
+            </div>
+            <div class="razon">
+                <img src="assets/images/servicios2.jpg" alt="Inversiones para Todos los Gustos">
+                <h3>INVERSIONES PARA TODOS LOS GUSTOS</h3>
+                <p>Tenemos una amplia variedad de lotes residenciales y comerciales para todo tipo de presupuesto y estilos de vida. Enfocándonos siempre en proveer las mejores opciones de rentabilidad.</p>
+            </div>
+            <div class="razon">
+                <img src="assets/images/servicios3.jpg" alt="Planes de Financiamiento a tu Medida">
+                <h3>PLANES DE FINANCIAMIENTO A TU MEDIDA</h3>
+                <p>Ofrecemos la posibilidad de adquirir tu patrimonio a cómodas mensualidades, tenemos planes de hasta 96 meses. Tú decides la mensualidad y el pago inicial que quieres realizar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2>SERVICIOS</h2>
+        <p>Dentro de los servicios que brindamos como empresa desarrolladora contamos con los siguientes:</p>
+        <div class="servicios-contenedor">
+            <div class="servicio-item">
+                <i class="icono-dolar"></i>
+                <h3>Asesoría sobre proceso de adquisición de terrenos en la costa oaxaqueña</h3>
+            </div>
+            <div class="servicio-item">
+                <i class="icono-documento"></i>
+                <h3>Gestión de títulos y documentación para garantizar la legitimidad de la transacción</h3>
+            </div>
+            <div class="servicio-item">
+                <i class="icono-gastos"></i>
+                <h3>Asesoramiento sobre los gastos y trámites legales para la compra</h3>
+            </div>
+            <div class="servicio-item">
+                <i class="icono-busqueda"></i>
+                <h3>Búsqueda de terrenos en función de las necesidades del comprador</h3>
+            </div>
+            <div class="servicio-item">
+                <i class="icono-financiamiento"></i>
+                <h3>Aprobación de financiamiento directo con la empresa</h3>
+            </div>
+            <div class="servicio-item">
+                <i class="icono-diseno"></i>
+                <h3>Diseño y planeación de proyectos arquitectónicos</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="contacto-contenedor">
+            <div class="contacto-info">
+                <h2>CONTACTO</h2>
+                <h3>BOLSA DE TRABAJO</h3>
+                <p>¿Eres asesor inmobiliario independiente o tienes experiencia en ventas? Forma parte de nuestro equipo</p>
+                <h3>SOCIO</h3>
+                <p>¿Tienes un terreno disponible o cuentas con capital para invertir? Hazlo con nosotros. Desarrollemos juntos...</p>
+            </div>
+            <div class="contacto-formulario">
+                <form>
+                    <label for="nombre">Tu nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="correo">Tu correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+                    
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                    
+                    <label for="mensaje">Tu mensaje (opcional)</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                    
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-contenedor">
+            <div class="footer-seccion">
+                <h3>UBICACIÓN</h3>
+                <p>Segunda Norte S/N (Planta alta)<br>
+                <i>Casi esquina con Av. Oaxaca, Centro.</i><br>
+                <strong>Puerto Escondido</strong><br>
+                Oaxaca, México</p>
+            </div>
+            <div class="footer-seccion">
+                <h3>HORARIO</h3>
+                <p>Lunes – Viernes<br>
+                09:00 AM – 02:00 PM<br>
+                04:00 PM – 07:00 PM</p>
+            </div>
+            <div class="footer-seccion">
+                <h3>CONTACTO</h3>
+                <p>T: +52 954 127 9774<br>
+                M: contacto@grupopacificoescondido.com</p>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="vendor/script.js"></script>
+    
 </body>
 </html>
